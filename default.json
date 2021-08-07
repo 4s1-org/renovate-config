@@ -1,1 +1,14 @@
-
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "packageRules": [{
+    "matchPackageNames": ["@types/node"],
+    "groupName": "types",
+    "automerge": true,
+    "automergeType": "branch"
+  }]
+}
