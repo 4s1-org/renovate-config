@@ -17,14 +17,5 @@
       "automerge": true,
       "automergeType": "branch"
     }
-  ],
-  "hostRules": [
-    {
-      "hostType": "npm",
-      "matchHost": "https://gitlab.com/api/v4/packages/npm/",
-      "encrypted": {
-        "token": "ccyJBwJodVlBZMpV2sJWwFo4K/yNrOC1dIKDB5EgxG2WScRSUIO0kFuxL0rvOQz1sMkVVvIrJRbqAOnVod9m2SjDVUmgWWUQk+XLUUCRHuYeWpu0kQq+JOSp6aBK+nC7RlzlPVzusi+s37RPb9ev/9n8bCB+kARpBzxbZD6EbSRlW/MwxarKUIreyBpU64Vanmjt9g3h+XoBXpOwSCXefooaYcKDeFvTvLwJf3mCC4whPRjIzcdafC0RcqhRhnxoxA5bMnrSWl84vxZYV1AfWok74xhmvxq10UM++RUYsfj0Hy72mNouidRUIW3NsBE7oBz9e0tzqe0dV+ONixtpSg=="
-      }
-    }
   ]
 }
