@@ -7,15 +7,5 @@
   "prHourlyLimit": 0,
   "assignees": [
     "YellowGarbageBag"
-  ],
-  "packageRules": [
-    {
-      "matchPackageNames": [
-        "@types/node"
-      ],
-      "groupName": "types",
-      "automerge": true,
-      "automergeType": "branch"
-    }
   ]
 }
