@@ -11,14 +11,11 @@
     "YellowGarbageBag"
   ],
   
-  "separateMinorPatch": true,
-  "patch": {
-    "automerge": true
-  },
-  "pin": {
-    "automerge": true
-  },
-  "lockFileMaintenance": {
-    "automerge": true
-  }
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
+    }
+  ]
 }
