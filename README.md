@@ -39,7 +39,7 @@ module.exports = {
 ```bash
 docker run \
   --rm \
-  -v ./config.js:/usr/src/app/config.js \
+  -v ${PWD}/config.js:/usr/src/app/config.js \
   -e GITHUB_COM_TOKEN=<GITHUB-TOKEN> \
   -e LOG_LEVEL=info \
   renovate/renovate
