@@ -3,9 +3,21 @@
   "extends": [
     "config:base"
   ],
-  "prConcurrentLimit": 0,
-  "prHourlyLimit": 0,
+  // "prConcurrentLimit": 0,
+  // "prHourlyLimit": 0,
   "assignees": [
     "YellowGarbageBag"
-  ]
+  ],
+
+  // Automerge patch upgrades if they pass tests
+  "separateMinorPatch": true,
+  "patch": {
+    "automerge": true
+  },
+  "pin": {
+    "automerge": true
+  },
+  "lockFileMaintenance": {
+    "automerge": true
+  }
 }
