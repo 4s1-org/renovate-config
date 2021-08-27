@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":semanticCommits"],
+  "extends": ["config:base", ":semanticCommits", ":semanticCommitTypeAll(dependency)", ":semanticCommitScopeDisabled"],
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "gitLabAutomerge": true,
