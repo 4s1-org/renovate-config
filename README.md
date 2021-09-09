@@ -7,7 +7,7 @@ Create a `.renovaterc.json` file in the root folder of your project and add:
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>4s1/renovate-config"]
+  "extends": ["4s1/renovate-config"]
 }
 ```
 
