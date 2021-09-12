@@ -4,9 +4,14 @@
   "onboardingConfig": {
     "extends": ["config:base"]
   },
+
+  "endpoint": "https://gitlab.com/api/v4/",
   "autodiscover": true,
+  "platform": "gitlab",
   "autodiscoverFilter": "4s1/playground/*",
   "labels": ["renovate", "foobar"],
+  "gitAuthor": "Bot <bot@4s1.de>",
+
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "gitLabAutomerge": true,

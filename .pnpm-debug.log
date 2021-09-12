@@ -1,0 +1,32 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "errno": -2,
+    "code": "ENOENT",
+    "syscall": "spawn ajv-cli",
+    "path": "ajv-cli",
+    "spawnargs": [
+      "validate",
+      "-d",
+      "default.json",
+      "-s",
+      "renovate-schema.json"
+    ],
+    "originalMessage": "spawn ajv-cli ENOENT",
+    "shortMessage": "Command failed with ENOENT: ajv-cli validate -d default.json -s renovate-schema.json\nspawn ajv-cli ENOENT",
+    "command": "ajv-cli validate -d default.json -s renovate-schema.json",
+    "escapedCommand": "ajv-cli validate -d default.json -s renovate-schema.json",
+    "failed": true,
+    "timedOut": false,
+    "isCanceled": false,
+    "killed": false,
+    "err": {
+      "name": "Error",
+      "message": "Command failed with ENOENT: ajv-cli validate -d default.json -s renovate-schema.json\nspawn ajv-cli ENOENT",
+      "code": "ENOENT",
+      "stack": "Error: Command failed with ENOENT: ajv-cli validate -d default.json -s renovate-schema.json\nspawn ajv-cli ENOENT\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:269:19)\n    at onErrorNT (internal/child_process.js:467:16)\n    at processTicksAndRejections (internal/process/task_queues.js:82:21)"
+    }
+  }
+}
