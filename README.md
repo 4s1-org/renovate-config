@@ -1,46 +1,56 @@
 # Renovate Config
 
-## How to use
+## How to use in a project
 
 Create a `.renovaterc.json` file in the root folder of your project and add:
 
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["4s1/renovate-config"]
+  "extends": ["local>4s1/renovate-config"]
 }
 ```
 
-Add the project to you underlying `config.js` where the renovate bot is running.
+## How to configure service
 
-## config.js
+I've created two files, `config.js` and `start.sh`. \
+A cronjob starts the Renovate Bot service every 3 hours between 7 and 21 o'clock. \
+`0 7-21/3 * * * cd ~/renovate-bot && ./start.sh`
+
+### config.js
 
 ```js
 module.exports = {
-  endpoint: "https://gitlab.com/api/v4/",
-  token: "<GITLAB-TOKEN>",
-  platform: "gitlab",
   onboardingConfig: {
-    extends: ["config:base"],
+    extends: ['config:base'],
   },
-  hostRules: [
-    {
-      hostType: "npm",
-      matchHost: "https://gitlab.com/api/v4/packages/npm/",
-      token: "<GITLAB-TOKEN>",
-    },
-  ],
-  repositories: ["<PROJECT-1>", "<PROJECT-2>", "<PROJECT-n>"],
-};
+  autodiscoverFilter: '4s1/**',
+  labels: ['renovate'],
+}
 ```
 
-## Docker Container
+### start.sh
+
+`BOT_AUTHOR_INFO` like "Foo <foo@bar.de>". \
+`BOT_GITLAB_TOKEN` with the following settings:
+
+- api
+- read_user
+- write_repository
+
+`BOT_GITLAB_TOKEN` with no special settings, just an API key to increase the rate limit against github.com for fetching the changelogs.
 
 ```bash
 docker run \
   --rm \
   -v ${PWD}/config.js:/usr/src/app/config.js \
-  -e GITHUB_COM_TOKEN=<GITHUB-TOKEN> \
-  -e LOG_LEVEL=info \
-  renovate/renovate
+  -e RENOVATE_ENDPOINT="https://gitlab.com/api/v4/" \
+  -e RENOVATE_AUTODISCOVER="true" \
+  -e RENOVATE_TOKEN="<BOT_GITLAB_TOKEN>" \
+  -e RENOVATE_PLATFORM="gitlab" \
+  -e RENOVATE_GIT_AUTHOR="<BOT_AUTHOR_INFO>" \
+  -e GITHUB_COM_TOKEN="<BOT_GITHUB_TOKEN>" \
+  -e LOG_LEVEL=debug \
+  renovate/renovate \
+  > "$(date +"%Y-%m-%d_%H-%M-%S").log"
 ```
