@@ -4,15 +4,12 @@
   "onboardingConfig": {
     "extends": ["config:base"]
   },
-
-  "autodiscoverFilter": "4s1/playground/*",
-  "labels": ["renovate", "foobar"],
-  "gitAuthor": "Bot <bot@4s1.de>",
-
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "gitLabAutomerge": true,
   "assignees": ["steffen-4s1"],
+  "labels": ["renovate"],
+  "gitAuthor": "Bot <bot@4s1.de>",
   "packageRules": [
     {
       "matchUpdateTypes": ["patch", "pin"],
