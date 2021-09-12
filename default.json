@@ -4,7 +4,8 @@
   "onboardingConfig": {
     "extends": ["config:base"]
   },
-  "autodiscoverFilter": "4s1/playground/**",
+  "autodiscover": true,
+  "autodiscoverFilter": "4s1/playground/*",
   "labels": ["renovate", "foobar"],
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
