@@ -33,7 +33,7 @@ docker run \
 - read_user
 - write_repository
 
-`BOT_GITLAB_TOKEN` with no special settings, just an API key to increase the rate limit against github.com for fetching the changelogs.
+`BOT_GITHUB_TOKEN` with no special settings, just an API key to increase the rate limit against github.com for fetching the changelogs.
 
 A cronjob starts the Renovate Bot service every 3 hours between 7 and 21 o'clock. \
 `0 7-21/3 * * * cd ~/renovate-bot && ./start.sh`
