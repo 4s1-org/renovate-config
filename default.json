@@ -1,11 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":semanticCommits", ":semanticCommitTypeAll(chore)", ":semanticCommitScopeDisabled"],
+  "extends": ["config:base", ":semanticCommits", ":semanticCommitTypeAll(chore)", ":semanticCommitScopeDisabled", ":disableRateLimiting"],
   "onboardingConfig": {
     "extends": ["config:base"]
   },
-  "prConcurrentLimit": 0,
-  "prHourlyLimit": 0,
   "enabledManagers": ["npm", "docker"],
   "gitLabAutomerge": true,
   "assignees": ["steffen-4s1"],
