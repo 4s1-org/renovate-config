@@ -18,6 +18,24 @@
       "matchPackagePatterns": ["^@4s1/"],
       "matchUpdateTypes": ["minor", "patch", "pin"],
       "automerge": true
+    },
+    {
+      "matchPackagePatterns": [
+        "@commitlint/cli",
+        "@commitlint/config-conventional",
+        "@types/node",
+        "eslint",
+        "husky",
+        "prettier",
+        "standard-version"
+      ],
+      "matchUpdateTypes": ["minor", "patch", "pin"],
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["typescript"],
+      "matchUpdateTypes": ["patch", "pin"],
+      "automerge": true
     }
   ]
 }
