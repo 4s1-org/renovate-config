@@ -26,7 +26,8 @@
         "eslint",
         "husky",
         "prettier",
-        "standard-version"
+        "standard-version",
+        "ts-node"
       ],
       "matchUpdateTypes": ["minor", "patch", "pin"],
       "automerge": true
