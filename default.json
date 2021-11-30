@@ -5,6 +5,7 @@
     "extends": ["config:base"]
   },
   "enabledManagers": ["npm", "docker"],
+  "platformAutomerge": true,
   "assignees": ["steffen-4s1"],
   "labels": ["renovate"],
   "gitAuthor": "Bot <bot@4s1.de>",
