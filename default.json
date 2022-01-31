@@ -4,7 +4,7 @@
   "onboardingConfig": {
     "extends": ["config:base"]
   },
-  "enabledManagers": ["npm", "docker", "golang"],
+  "enabledManagers": ["npm", "docker", "gomod"],
   "platformAutomerge": true,
   "assignees": ["steffen-4s1"],
   "labels": ["renovate"],
