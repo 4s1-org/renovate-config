@@ -37,7 +37,7 @@
       "matchPackagePatterns": ["typescript"],
       "matchUpdateTypes": ["patch", "pin"],
       "automerge": true,
-      "allowedVersions": "<=4.5"
+      "allowedVersions": "<=4.6"
     }
   ]
 }
