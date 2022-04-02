@@ -7,7 +7,7 @@ Create a `.renovaterc.json` file in the root folder of your project and add:
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>4s1/renovate-config"]
+  "extends": ["local>4s1-org/renovate-config"]
 }
 ```
 
@@ -20,8 +20,8 @@ module.exports = {
   hostRules: [
     {
       // required for private packages
-      hostType: 'npm',
-      matchHost: 'https://gitlab.com/api/v4/packages/npm/',
+      hostType: "npm",
+      matchHost: "https://gitlab.com/api/v4/packages/npm/",
       token: process.env.RENOVATE_TOKEN,
     },
   ],
