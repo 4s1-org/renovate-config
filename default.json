@@ -4,8 +4,6 @@
   "onboardingConfig": {
     "extends": ["config:base"]
   },
-  "autodiscover": true,
-  "autodiscoverFilter": "4s1-org/playground-library",
   "enabledManagers": ["npm", "dockerfile", "gomod"],
   "platformAutomerge": true,
   "assignees": ["steffen-4s1"],
@@ -40,6 +38,10 @@
       "matchUpdateTypes": ["patch", "pin"],
       "automerge": true,
       "allowedVersions": "<=4.6"
+    },
+    {
+      "matchPackagePatterns": ["@types/node", "node"],
+      "allowedVersions": "<=14"
     }
   ]
 }
