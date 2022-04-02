@@ -4,6 +4,7 @@
   "onboardingConfig": {
     "extends": ["config:base"]
   },
+  "autodiscover": true,
   "autodiscoverFilter": "4s1-org/playground-library",
   "enabledManagers": ["npm", "dockerfile", "gomod"],
   "platformAutomerge": true,

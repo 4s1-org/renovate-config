@@ -2,7 +2,9 @@ name: RenovateBot
 
 on:
   schedule:
-    - cron: '0/5 * * * *'
+    - cron: '0/15 * * * *'
+  push:
+    branches: [main]
 
 jobs:
   renovate:
@@ -15,3 +17,5 @@ jobs:
         with:
           configurationFile: default.js
           token: ${{ secrets.RENOVATE_TOKEN }}
+        env:
+          LOG_LEVEL: 'info'
