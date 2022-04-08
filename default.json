@@ -42,6 +42,10 @@
     {
       "matchPackagePatterns": ["@types/node", "node"],
       "allowedVersions": "<=14"
+    },
+    {
+      "matchPackagePatterns": ["configstore"],
+      "allowedVersions": "<=5"
     }
   ]
 }
