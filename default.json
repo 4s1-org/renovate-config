@@ -25,7 +25,6 @@
         "@commitlint/config-conventional",
         "@types/node",
         "eslint",
-        "husky",
         "prettier",
         "standard-version",
         "ts-node"
