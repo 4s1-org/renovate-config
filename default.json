@@ -45,6 +45,10 @@
     {
       "matchPackagePatterns": ["configstore"],
       "allowedVersions": "<=5"
+    },
+    {
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<=4.7"
     }
   ]
 }
