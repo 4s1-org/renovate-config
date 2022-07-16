@@ -9,6 +9,8 @@
   "assignees": ["steffen-4s1"],
   "labels": ["renovate"],
   "gitAuthor": "Bot <bot@4s1.de>",
+  "stabilityDays": 8,
+  "internalChecksFilter": "strict",
   "packageRules": [
     {
       "matchUpdateTypes": ["patch", "pin"],
